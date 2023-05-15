@@ -1,0 +1,147 @@
+header
+    height: 100%
+    overflow-x: hidden 
+    margin-bottom: -100px
+    menu
+        position: relative
+        z-index: 1
+        height: 100px
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2)
+        background-color: #0707074d
+        display: flex
+        align-items: center
+        margin: 0
+        .container
+            display: flex
+            flex-flow: row nowrap
+            justify-content: space-between
+            .nav
+                display: flex 
+                flex-flow: row nowrap
+                align-items: center
+                .nav_element
+                    margin-right: 36px
+                    color: #ffffff
+                    font-family: "Droid Sans"
+                    font-size: 13px
+                    font-weight: 400
+                    text-align: left
+                    text-transform: uppercase
+                    transition: all 0.2s ease-in-out
+                    letter-spacing: 0px
+                    &:hover
+                        letter-spacing: 0px
+                        color: $bg-color
+                        font-family: "Droid Sans - Bold"
+                        text-decoration: none
+                        transform: scale(1.2)
+                        &:before
+                            content: ''
+                            display: block
+                            width: 100%
+                            height: 3px
+                            background: $bg-color
+                            transform: translateY(-30px)
+                #last_element
+                    margin-right: 0
+        .dropdown
+            display: none
+            
+
+    .baner
+        position: static
+        transform: translateY(-100px)
+        
+        height: 100%
+        width: 100%
+        .carousel
+            .carousel-caption
+                position: absolute
+                top: 35%
+                bottom: auto
+                width: 35%
+                left: auto
+                right: 17%
+                h5
+                    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36)
+                    font-family: Lato
+                    font-size: clamp(26px, 3vw, 48px)
+                    font-weight: 300
+                    text-align: left
+                    span
+                        font-family: "Lato - Bold"
+                        font-weight: 700
+                p
+                    width: 100%
+                    height: 60px
+                    color: #ffffff
+                    font-family: Lato
+                    font-size: cpalmp(14, 2vw, 18px)
+                    font-weight: 300
+                    font-style: normal
+                    letter-spacing: normal
+                    line-height: normal
+                    text-align: left
+                .button-grup
+                    position: absolute
+                    .btn
+                        margin-top: 40px
+                        margin-right: 40px
+                        width: 195px
+                        height: 61px
+                        border: 2px solid #ffffff
+                        
+                        font-size: 15px
+                        font-weight: 700
+                        font-family: Lato
+                        color: #ffffff
+                        text-transform: uppercase
+                        &:hover
+                            border: none
+                            box-shadow: 0 4px 0 #277697
+                            background-color: $bg-color
+                .available
+                    margin-top: 154px
+                    width: 255px
+                    height: 53px
+                    display: flex
+                    justify-content: space-between
+                    p
+                        width: 109px
+                        color: #ffffff
+                        font-family: Lato
+                        font-size: 18px
+                        font-weight: 300
+                        text-align: left
+                    .icon
+                        width: 53px
+                        height: 53px
+                        border-radius: 50%
+                        background-color: #030303
+                        opacity: 0.35
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        align-content: center
+            .carousel-inner
+                height: 100%
+            a
+                cursor: pointer
+                margin: 0 4%
+                top: 50%
+                width: 55px
+                height: 55px
+                border-radius: 50%
+                background-color:#4bcaff
+            .carousel-indicators
+                li
+                    cursor: pointer
+                    width: 12px
+                    height: 13px
+                    border-radius: 50%
+                .active
+                    transition: 0.3s
+                    width: 14px
+                    height: 14px
+                    border: 1px solid #4bcaff
+                    background-color: #4bcaff
