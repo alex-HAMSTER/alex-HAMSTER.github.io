@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 250px;
+        width: 400px;
     }
     &__link {
         color: #000;
@@ -26,6 +26,19 @@
         &:hover {
             color: #000;
             text-decoration: none;
+        }
+    }
+    &__lenguage_btn {
+        background: none;
+        border: none;
+        text-decoration: none;
+        font-weight: bold;
+        width: 40px;
+        height: 50px;
+        background-color: $main-color;
+        transform: rotate(45deg);
+        p{
+            transform: rotate(315deg);
         }
     }
 }
