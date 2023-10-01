@@ -23,6 +23,7 @@
     &__link {
         color: #000;
         font-weight: bold;
+        border-radius: 10px;
         &:hover {
             color: #000;
             text-decoration: none;
@@ -37,9 +38,22 @@
         height: 50px;
         background-color: $main-color;
         transform: rotate(45deg);
+        border-radius: 10px;
+        transition: 0.1s;
+        &:active{
+            border: none;
+        }
         p{
             transform: rotate(315deg);
         }
+    }
+    #lenguage_ru{
+        background: $main-color;
+        opacity: 0.6;
+    }
+    #lenguage_en{
+        background: $main-color;
+        opacity: 0.6;
     }
 }
 
