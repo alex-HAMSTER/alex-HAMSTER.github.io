@@ -26,50 +26,33 @@ const lenguageBtnEn = document.getElementById('lenguage_en');
 const allBtnLenguage = document.querySelectorAll('.promo__lenguage_btn');
 
 
-function loadTranslations(callback) {
-    fetch('js/ua.json') 
-    .then((response) => response.json())
-    .then((translations) => {
-        callback(translations);
-    })
-    .catch((error) => {
-        console.error('Помилка завантаження перекладу:', error);
+let currentLanguage = "ru";
+
+function loadLanguage(language) {
+    fetch(`js/${language}.json`)
+        .then(response => response.json())
+        .then(data => {
+        // Здесь обновляем текст на странице, используя данные из JSON
+        document.getElementById("my_name").textContent = data.my_name;
+        document.getElementById("my_from").textContent = data.my_from;
+
+        document.getElementById("sliderAboutMe").textContent = data.sliderAboutMe;
+        document.getElementById("sliderMyExperience").textContent = data.sliderMyExperience;
+        document.getElementById("sliderMySkill").textContent = data.sliderMySkill;
+        document.getElementById("sliderMyWork").textContent = data.sliderMyWork;
+        document.getElementById("sliderPrise").textContent = data.sliderPrise;
+        document.getElementById("sliderContact").textContent = data.sliderContact;
     });
 }
-
-// Функция для переключения языка
-function changeLanguage(language) {
-    loadTranslations((translations) => {
-
-    /* let fileName = '';
-
-    if (language === 'ua') {
-        fileName = 'ua.json';
-    } else if (language === 'en') {
-        fileName = 'en.json';
-    } */
-    // Пройдитесь по всем элементам с атрибутом data-translation-key
-    const elementsToTranslate = document.querySelectorAll('[data-translation-key]');
-    elementsToTranslate.forEach((element) => {
-        const translationKey = element.getAttribute('data-translation-key');
-        if (translations.hasOwnProperty(translationKey)) {
-            element.textContent = translations[translationKey];
-        }
-        });
-    });
-}
-
 
 lenguageBtnUa.addEventListener('click', () => {
     allBtnLenguage.forEach(function(i){
         i.style.cssText = 'opacity: 0.6;';
     })
     lenguageBtnUa.style.cssText = 'opacity: 1;';
-    
-    changeLanguage('ua');
-    loadTranslations((translations) => {
-    changeLanguage('ua'); // Изначально установите українську мову, или яку бажаєте
-    });
+    currentLanguage = "ua";
+    loadLanguage(currentLanguage);
+
 });
 
 lenguageBtnEn.addEventListener('click', () => {
@@ -77,10 +60,9 @@ lenguageBtnEn.addEventListener('click', () => {
         i.style.cssText = 'opacity: 0.6;';
     })
     lenguageBtnEn.style.cssText = 'opacity: 1;';
-    changeLanguage('en');
-    loadTranslations((translations) => {
-    changeLanguage('en'); // Изначально установите українську мову, или яку бажаєте
-    });
+
+
+
 })
 lenguageBtnRu.addEventListener('click', () => {
     allBtnLenguage.forEach(function(i){

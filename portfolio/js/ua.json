@@ -1,4 +1,12 @@
 {
 "my_name": "Мене звати Олексій Федорченко",
-"my_from": "Я web-розробник із міста Житомир"
+"my_from": "Я web-розробник із міста Житомир",
+
+"sliderAboutMe": "ПРО МЕНЕ",
+"sliderMyExperience": "МІЙ ДОСВІД",
+"sliderMySkill": "МОЇ НАВИЧКИ",
+"sliderMyWork":"МОЇ РОБОТИ",
+"sliderPrise": "ПРАЙС-ЛИСТ",
+"sliderContact": "КОНТАКТИ"
+
 }
