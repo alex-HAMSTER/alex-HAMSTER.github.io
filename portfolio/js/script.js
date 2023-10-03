@@ -32,8 +32,26 @@ function loadLanguage(language) {
     fetch(`js/${language}.json`)
         .then(response => response.json())
         .then(data => {
+        
+        const elementsToUpdate = [
+            "my_name",
+            "my_from",
+            "sliderAboutMe",
+            "sliderMyExperience",
+            "sliderMySkill",
+            "sliderMyWork",
+            "sliderPrise",
+            "sliderContact",
+            "aboutMeDescr"
+        ];
+        
+        elementsToUpdate.forEach(i => {
+            if (data[i]){
+                document.getElementById(i).textContent = data[i];
+            }
+        })
         // Здесь обновляем текст на странице, используя данные из JSON
-        document.getElementById("my_name").textContent = data.my_name;
+        /* document.getElementById("my_name").textContent = data.my_name;
         document.getElementById("my_from").textContent = data.my_from;
 
         document.getElementById("sliderAboutMe").textContent = data.sliderAboutMe;
@@ -42,6 +60,7 @@ function loadLanguage(language) {
         document.getElementById("sliderMyWork").textContent = data.sliderMyWork;
         document.getElementById("sliderPrise").textContent = data.sliderPrise;
         document.getElementById("sliderContact").textContent = data.sliderContact;
+        document.getElementById("aboutMeDescr").textContent = data.aboutMeDescr; */
     });
 }
 
