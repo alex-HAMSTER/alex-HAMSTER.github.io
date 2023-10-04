@@ -50,17 +50,8 @@ function loadLanguage(language) {
                 document.getElementById(i).textContent = data[i];
             }
         })
-        // Здесь обновляем текст на странице, используя данные из JSON
         /* document.getElementById("my_name").textContent = data.my_name;
-        document.getElementById("my_from").textContent = data.my_from;
-
-        document.getElementById("sliderAboutMe").textContent = data.sliderAboutMe;
-        document.getElementById("sliderMyExperience").textContent = data.sliderMyExperience;
-        document.getElementById("sliderMySkill").textContent = data.sliderMySkill;
-        document.getElementById("sliderMyWork").textContent = data.sliderMyWork;
-        document.getElementById("sliderPrise").textContent = data.sliderPrise;
-        document.getElementById("sliderContact").textContent = data.sliderContact;
-        document.getElementById("aboutMeDescr").textContent = data.aboutMeDescr; */
+        document.getElementById("my_from").textContent = data.my_from; */
     });
 }
 
@@ -80,7 +71,8 @@ lenguageBtnEn.addEventListener('click', () => {
     })
     lenguageBtnEn.style.cssText = 'opacity: 1;';
 
-
+    currentLanguage = "en";
+    loadLanguage(currentLanguage);
 
 })
 lenguageBtnRu.addEventListener('click', () => {
