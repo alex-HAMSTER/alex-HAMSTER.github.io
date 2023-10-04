@@ -42,7 +42,26 @@ function loadLanguage(language) {
             "sliderMyWork",
             "sliderPrise",
             "sliderContact",
-            "aboutMeDescr"
+            "aboutMeDescr",
+            "aboutMeDescr",
+            "aboutMeName",
+            "aboutMeText",
+            "blockUnderAboutMeWeb",
+            "blockUnderAboutMeTextWeb",
+            "blockUnderAboutMeDev",
+            "blockUnderAboutMeTextDev",
+            "blockUnderAboutMeDesing",
+            "blockUnderAboutMeTextDesing",
+            "experienceTitle",
+            "experienceDescr",
+            "experienceBlockEducation",
+            "experienceBlockEducationDescr",
+            "experienceBlockEducationCourse",
+            "experienceBlockEducationCourseDescr",
+            "experienceWork",
+            "experienceWorkDescr",
+            "experiencePlaceWork",
+            "experiencePlaceWorkDescr"
         ];
         
         elementsToUpdate.forEach(i => {
