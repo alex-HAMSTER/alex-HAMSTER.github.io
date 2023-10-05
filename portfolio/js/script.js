@@ -61,7 +61,40 @@ function loadLanguage(language) {
             "experienceWork",
             "experienceWorkDescr",
             "experiencePlaceWork",
-            "experiencePlaceWorkDescr"
+            "experiencePlaceWorkDescr",
+            "skillsTitle",
+            "skillsWhat",
+            "skillsHTML",
+            "skillsCSS",
+            "skillsJS",
+            "skillsJquery",
+            "skillsReact",
+            "skillsNode",
+            "skillsMongo",
+            "progressCreatePage",
+            "progressCreateApp",
+            "progressWorkData",
+            "progressCreat",
+            "progressCreatDesing",
+            "portfolioo",
+            "myWorks",
+            "priceLandingFrom",
+            "priceLandingDescr",
+            "priceApplicationTitle",
+            "priceAppFrom",
+            "priceAppDescr",
+            "priceCoopTitle",
+            "priceCoopFrom",
+            "priceCoopDescr",
+            "priceOSTitle",
+            "priceOSFrom",
+            "priceOSDescr",
+            "priceShopTitle",
+            "priceShop",
+            "priceShopDesing",
+            "priceDesingTitle",
+            "priceDesing",
+            "priceDesingDescr"
         ];
         
         elementsToUpdate.forEach(i => {
@@ -99,6 +132,6 @@ lenguageBtnRu.addEventListener('click', () => {
         i.style.cssText = 'opacity: 0.6;';
     })
     lenguageBtnRu.style.cssText = 'opacity: 1;';
-    
+    location.reload();
 })
 /* функция или тут или на css сделать что бы у кнопок был background только если она активна */
