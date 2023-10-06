@@ -94,7 +94,15 @@ function loadLanguage(language) {
             "priceShopDesing",
             "priceDesingTitle",
             "priceDesing",
-            "priceDesingDescr"
+            "priceDesingDescr",
+            "contactTitle",
+            "contactMe",
+            "contactAnyWay",
+            "yourName",
+            "yourPost",
+            "yourMesage",
+            "yourMesageSend",
+            "policyYes"
         ];
         
         elementsToUpdate.forEach(i => {
