@@ -1,6 +1,106 @@
 {
-    "my_name": "My name Olexiy Fedorchenko",
-    "my_from": "I'm web-developer from Zhitomir city",
-    "aboutMeDescr": "About me"
+"my_name": "My name Olexiy Fedorchenko",
+"my_from": "I'm web-developer from Zhitomir city",
+
+"PromoBtnPortfolio": "Portfolio",
+"promoBtnAboutMe": "About Me",
+"socialMe": "Social Media",
+
+
+"sliderAboutMe": "ABOUT ME",
+"sliderMyExperience": "MY EXPERIENCE",
+"sliderMySkill": "MY SKILLS",
+"sliderMyWork": "MY WORKS",
+"sliderPrise": "PRISE",
+"sliderContact": "CONTACT",
+
+
+"aboutMeName": "",
+"aboutMeText": "",
+"aboutMeDescr": "About me",
+
+
+"aboutMeDescr": "About Me",
+"aboutMeName": "My name is Oleksiy",
+"aboutMeText": "Front-end Developer. I have the ability to code according to templates from Figma,Avocode, marss, Wix, and Photoshop. My core skills include HTML and CSS coding.I have a basic understanding of JS and React, and I write beginner-level scripts.Experience as a team lead, having served as the head of a project. Experiencedprofessional with a strong command of the WordPress content management system. Ipossess hands-on experience in implementing web layout on the WordPress platform,ensuring efficient and high-quality content rendering. Actively engaged with variousplugins, successfully integrating their functionality to enhance user experience andextend website capabilities. I have completed a significant number of projects basedon Figma templates. All coding is cross-browser compatible and responsive. I possesspixel-perfect web layout skills.",
+
+"blockUnderAboutMeWeb": "Web Development",
+"blockUnderAboutMeTextWeb": "Effective web design and dynamic website development using modern tools and platforms to help your business thrive online.",
+
+"blockUnderAboutMeDev": "App Development",
+"blockUnderAboutMeTextDev": "Programming and app development that turns your idea into an innovative solution for mobile and web platforms.",
+
+"blockUnderAboutMeDesing": "UI/UX Design",
+"blockUnderAboutMeTextDesing": "Creating interfaces that captivate and provide usability to make your product stand out among competitors.",
+
+
+"experienceTitle": "Experience",
+"experienceDescr": "How I Can Be Helpful",
+"experienceBlockEducation": "Education",
+"experienceBlockEducationDescr": "Education at Zhytomyr National Agricultural University (ZNAU Polissia univer) awarded me a master's degree and valuable experience in the field, complementing my skills in web development and design. My academic journey from 2018 to 2023 enriched my knowledge and prepared me for a successful career in the field of information technology.",
+"experienceBlockEducationCourse": "Web Development Courses",
+"experienceBlockEducationCourseDescr": "On web development courses on the UDEMY platform under the guidance of Ivan Petrichenko, I mastered HTML5, CSS3, JavaScript (including ES6), as well as responsive web design. I gained experience with React, Sass, and Git, and I am ready for a successful career in web development.",
+
+"experienceWork": "Work Experience",
+"experienceWorkDescr": "At EPAM, from 2021 to 2022, I worked on the development of web applications, implementing cutting-edge technologies and ensuring a high-quality user experience. My experience at the company includes the development and optimization of web projects, as well as active participation in teamwork to achieve project goals.",
+
+"experiencePlaceWork": "Squad Team | Kyiv (2023)",
+"experiencePlaceWorkDescr": "Squad Team 2023: My experience in the Squad Team in 2023 involves collaborative efforts on complex tasks and the successful achievement of results in the development and improvement of web projects.",
+
+
+"skillsTitle": "Skills",
+"skillsWhat": "What I Use in My Work",
+"skillsHTML": "It creates the framework for your website or application, and the fifth version allows me to create a more SEO-optimized structure for your product.",
+"skillsCSS": "This style language allows me to create absolutely any appearance for your website or application. The limit is only your imagination!",
+"skillsJS": "This programming language allows me to animate anything: sliders, windows, tooltips, tabs, fetching data from the server, and much more.",
+"skillsJquery": "The jQuery library helps speed up development. We won't integrate it into the project if it's not necessary, but I have skills working with it.",
+"skillsReact": "This library enables us to create web applications. We can create a highly interactive product tailored to your goals.",
+"skillsNode": "This platform allows me to create the backend for your product - the 'brain' that performs actions the user doesn't see.",
+"skillsMongo": "This is a non-relational database that will store data for your website or application.",
+
+
+"progressCreatePage": "Website Creation",
+"progressCreateApp": "App Development",
+"progressWorkData": "Data Handling",
+"progressCreat": "Creativity",
+"progressCreatDesing": "Design Creation",
+
+"portfolioo": "Portfolio",
+"myWorks": "My Works",
+
+"priceLandingFrom": "from 1000 UAH",
+"priceLandingDescr": "One-page website for presenting services/products/...",
+
+"priceApplicationTitle": "Web Application",
+"priceAppFrom": "from 7000 UAH",
+"priceAppDescr": "In-browser application for better convenience",
+
+"priceCoopTitle": "Corporate Website",
+"priceCoopFrom": "from 5000 UAH",
+"priceCoopDescr": "Company website for your business or organization",
+
+"priceOSTitle": "Android/IOS App",
+"priceOSFrom":"from 10000 UAH",
+"priceOSDescr": "App for smartphones on any OS",
+
+"priceShopTitle": "Online Store",
+"priceShop": "from 10000 UAH",
+"priceShopDesing": "A tool for your online sales",
+
+"priceDesingTitle": "Design",
+"priceDesing": "Custom",
+"priceDesingDescr": "I create design for your website/application",
+
+
+"contactTitle": "Contact Information",
+"contactMe": "Contact Me",
+"contactAnyWay": "Any way convenient for you",
+"contactLeaveData": "Or leave your contact information, and I will reach out to you:",
+
+"yourName": "Your Name",
+"yourPost": "Your Email",
+"yourMesage": "Your Message",
+"yourMesageSend": "Send Message",
+"policyYes": "I agree with the privacy policy."
 }
 
