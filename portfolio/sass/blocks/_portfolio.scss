@@ -22,5 +22,8 @@
             height: 100%;
             object-fit: cover;
         }
+        &:hover{
+            border: 7px skyblue solid;
+        }
     }
 }
