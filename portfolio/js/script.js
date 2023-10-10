@@ -104,7 +104,9 @@ function loadLanguage(language) {
             "yourPost",
             "yourMesage",
             "yourMesageSend",
-            "policyYes"
+            "policyYes",
+            "contactLeaveData",
+            "priceList"
         ];
         
         elementsToUpdate.forEach(i => {

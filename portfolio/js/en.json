@@ -4,7 +4,7 @@
 
 "PromoBtnPortfolio": "Portfolio",
 "promoBtnAboutMe": "About Me",
-"socialMe": "Social Media",
+"socialMe": "Social Media"  ,
 
 
 "sliderAboutMe": "ABOUT ME",
@@ -101,6 +101,7 @@
 "yourPost": "Your Email",
 "yourMesage": "Your Message",
 "yourMesageSend": "Send Message",
-"policyYes": "I agree with the privacy policy."
+"policyYes": "I agree with the privacy policy.",
+"priceList": "Price-list"
 }
 
