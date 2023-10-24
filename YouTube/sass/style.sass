@@ -1,0 +1,228 @@
+@import 'fonts'
+@import 'vars'
+@import 'annul'
+@import 'call'
+@import 'servis'
+@import 'project'
+.container
+    padding: 0 20px
+/* что бы не задавать ширину просто сделаю отступ по бокам, т.к. маленькое окно в 320 рх */
+
+header
+    background-color: $accent
+    .header_inner
+        min-height: 80px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .logo_link
+            margin-left: 5px
+/* не лого а лого линк т.к. нужно обратится не к блоку а к елементу */
+
+.menu
+    &_btn
+        width: 40px
+        min-height: 40px
+        border-radius: 3px
+        background: #fff
+        border: none
+        position: relative
+        &::after
+            content: ""
+            width: 12px
+            height: 2px
+            border-radius: 1px
+            background: $accent
+            top: 15px
+            left: 14px
+            box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent /* сделано через тень что бы не делать несколько псевдокласво */
+            position: absolute
+
+
+.head
+    background-image: url('../img/head_bg.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover /* только так станет через юрл */
+    /* background-repeat: repeat */
+    min-height: 193px
+    .top_slider
+        .slider_item
+            color: #fff
+            text-align: center
+            min-height: 193px
+            .top_slider_text
+                display: none
+            .top_slider_btn
+                display: none
+            
+            .slider_title
+                font-family: 'RobotoCondensed-Regular'
+                font-size: 28px
+                font-style: normal
+                font-weight: 400
+                line-height: 28px
+                font-weight: 400px
+                text-transform: uppercase
+                padding: 36px 0 20px
+                max-width: 243px
+                margin: 0 auto
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    height: 8px
+                    background-color: $text_color
+                    width: 61px
+                    margin: 0 auto
+                    /* серая линиия под текстом */
+                
+        .slick-dots
+            display: flex
+            justify-content: center
+            position: absolute
+            bottom: 20px
+            left: 0
+            right: 0
+            .slick-active /* активная кнопка */
+                button
+                    background-color: transparent
+                    border: 1px solid #476E4D 
+            button
+                font-size: 0
+                border: none
+                background-color: $accent
+                padding: 0
+                width: 10px
+                height: 10px
+                border-radius: 50%
+                margin: 0 10px
+
+
+/* @medeia min-width: 1000px -- на всех мониторах которые выше 1000 пиксилей будет такой стиль а если @media max-width: 1200px то на всех что до этого значения */
+
+@media (min-width: 640px)
+    header
+        .header_inner
+            min-height: 100px
+            .logo_link
+                margin-left: 23px
+    .container
+        padding: 0 30px
+@media (min-width: 640px)
+    .head
+        min-height: 386px
+        .top_slider
+            .slider_item
+                min-width: 386px
+                .slider_title
+                    padding: 50px 0 15px
+                    font-size: 60px
+                    font-weight: 400
+                    margin: 0 auto 30px
+                    line-height: 60px
+                    max-width: 522px
+                .top_slider_btn
+                    background-color: $accent
+                    width: 200px
+                    height: 50px
+                    flex-shrink: 0
+                    border: none
+                    border-radius: 3px
+
+                    display: block
+                    margin: 0 auto 113px
+                    font-size: 18px
+                    font-weight: 400
+                    font-family: Roboto
+                    color: $bg-color
+            .slick-dots
+                bottom: 50px
+            .slick-arrow
+                width: 56px
+                height: 56px
+                border: none
+                position: absolute
+                right: 0
+                z-index: 5
+            .slick-prev
+                background: $accent
+                top: calc( 50% - 56px )
+            .slick-next
+                background: $bg-color
+                bottom: calc( 50% - 56px )
+
+
+
+@media (min-width: 768px)
+    header
+        .header_inner
+            .logo_link
+                margin-left: 23px
+    .container
+        padding: 0 40px
+    .head
+        .top_slider
+            min-height: 465px
+            .slider_item
+                .slider_title
+                    padding: 87px 0 0
+                    margin: 0 auto 0
+                    &::after
+                        display: none
+                .top_slider_text
+                    display: block
+                    color: #FFF
+                    text-align: center
+                    font-family: RobotoCondensed-Regular
+                    font-size: 18px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 20px
+                    width: 587px
+                    margin: 0 auto
+                    margin-top: 31px
+                    margin-bottom: 32px
+                    max-width: 587px
+
+
+@media (min-width: 1024px)
+    .container
+        max-width: 1200px
+        margin: 0 auto
+        padding: 0 40px
+    .head
+        .top_slider
+            .slider_item
+                min-height: 623px
+                .slider_title
+                    padding-top: 101px
+                    font-size: 84px
+                    line-height: 84px
+                    letter-spacing: 2px
+                    max-width: 751px
+            .slick-dots
+                bottom: 85px 
+
+
+@media (min-width: 1440px)
+    .menu_btn
+        margin-right: 90px
+    .container
+        max-width: 1320px
+    .head
+        .top_slider
+            .slider_item
+                min-height: 668px
+                .slider_title
+                    padding-top: 107px
+                    font-size: 96px
+                    line-height: 96px
+                    min-width: 865px
+                .top_slider_text
+                    min-width: 886px
+                    font-size: 24px
+                    line-height: 26px

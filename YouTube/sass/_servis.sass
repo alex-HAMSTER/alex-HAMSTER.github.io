@@ -1,0 +1,158 @@
+.servis
+    padding: 25px 0
+    text-align: center
+    &_first_text
+            color: $text_color
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Roboto-Regular
+            font-size: 20px
+            font-weight: 400
+            line-height: 24px
+            margin-top: 80px
+    &_second_text
+        color: #797979
+        font-feature-settings: 'clig' off, 'liga' off
+        font-family: Roboto-Regular
+        font-size: 15px
+        font-weight: 400
+        line-height: 17px
+        margin-top: 20px
+    &_title
+        color: $accent
+        font-feature-settings: 'clig' off, 'liga' off
+        font-family: RobotoCondensed-Regular
+        font-size: 24px
+        font-weight: 400
+        line-height: normal
+        letter-spacing: 2px
+        display: flex
+        flex-direction: column
+        align-items: center
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            width: 100px
+            height: 8px
+            background-color: $accent
+            margin-top: 40px
+
+.servis
+    .buttons
+        margin-top: 40px
+        .descr_invis
+            color: #9B9B9B
+            font-family: Dosis
+            font-size: 16px
+            font-weight: 400
+            line-height: 18px
+            display: none
+            margin-top: 41px
+        .container_link
+            padding: 18px
+            height: 310px
+            .frame_icon
+                height: 277px
+                padding: 80px 0
+                &:hover
+                    transition: 0.3s
+                    border: 4px solid $accent
+                    /* transform: translate(0,-20px) */
+                    padding-top: 25px
+                    .descr_invis
+                        display: block
+                &:not(:hover)
+                    transition: 0.4s
+            .link
+                text-decoration: none
+                .icon_descr
+                    margin-top: 30px
+                    color: $text_color
+                    font-family: RobotoCondensed-Bold
+                    letter-spacing: 2px
+                    
+
+
+@media (min-width: 640px)
+    .servis
+        .servis_first_text
+            margin-top: 25px
+            font-size: 24px
+            padding: 0 45px 0 45px
+        .servis_second_text
+            font-size: 18px
+            line-height: 24px
+            margin-top: 69px
+        &_title
+            font-size: 48px
+            &::before
+                margin-top: 162px
+    .servis
+        .buttons
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            height: 1260px
+            .container_link
+                width: 50%
+                .frame_icon
+                    height: 282px
+
+@media (min-width: 768px)
+    .servis
+        padding: 50px 0
+        .servis_first_text
+            margin-top: 30px
+            text-align: left
+            padding: 0
+        .servis_second_text
+            text-align: left
+            padding: 0
+        .servis_title
+            align-items: normal
+            &::before
+                margin-top: 140px
+    .servis
+        .buttons
+            height: 1400px
+            .container_link
+                height: 335px
+                .frame_icon
+                    height: 288px
+
+@media (min-width: 1024px)
+    .servis
+        .buttons
+            /* padding: 10px 15px */
+            height: 546px
+            .container_link
+                height: 269px
+                width: 209px
+                .frame_icon
+                    width: 222px
+                    height: 255px
+
+@media (min-width: 1440px)
+    .servis
+        padding: 0
+        .con
+            display: flex
+            justify-content: space-between
+            align-items: center
+        .servis_info
+            width: 400px
+            .servise_title
+                &::before
+                    margin-top: 200px
+        .servis_title
+            text-align: left
+        .buttons
+            height: 547px
+            width: 921px
+            margin-top: 0
+            .container_link
+                width: 226px
+                height: 270px
+                .frame_icon
+                    width: 212px
+                    height: 255px
