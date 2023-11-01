@@ -1,7 +1,8 @@
 .project
-    padding: 20px 0 40px 0
+    background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0.00) 100%)
     /* background-color: linear-gradient(#2B4074, #2B407400) */
     background-color: #2b40742b
+    padding: 20px 0 40px 0
     .project_title
         .title
             text-align: center
@@ -16,6 +17,8 @@
                 width: 50.089px
                 height: 8px
                 background-color: #fff
+                left: 50%
+                transform: translate3d(-50%, 40px, 0)
     .project_content
         margin-top: 69px
         display: flex
@@ -25,7 +28,8 @@
             display: flex
             justify-content: center
             align-items: center
-            flex-direction: column            
+            flex-direction: column
+            transition: 0.4s
             .link_invis
                 width: 243px
                 height: 217px
@@ -36,10 +40,19 @@
                 position: absolute
                 z-index: 5
                 margin-top: -30px
-                /* display: none */
-                /* &::hover
-                    .link_invis
-                        display: block */
+                display: none
+                .btn_link
+                    border: none
+                    background: none
+                    display: flex
+                    gap: 10px
+        .portfolio
+            transition: 0.4s
+            &:hover
+                .link_invis
+                    display: flex
+
+
 
         .img_descr
             margin-top: 20px
