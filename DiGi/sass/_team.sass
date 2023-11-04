@@ -1,0 +1,69 @@
+.team
+    padding: 20px 0 40px 0
+    .team_img
+        .team_photo
+            width: 100%
+    .team_text
+        display: flex
+        flex-direction: column
+        align-items: center
+        .team_title
+            margin-top: 43px
+            color: #4A4A4A
+            text-align: center
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: 'RobotoCondensed-Regular'
+            font-size: 24px
+            font-style: normal
+            font-weight: 400
+            &::before
+                content: ''
+                position: absolute
+                display: block
+                width: 50.089px
+                height: 8px
+                background-color: $accent
+                left: 50%
+                transform: translate3d(-50%, 40px, 0)
+        .team_descr
+            margin-top: 51px
+            color: #9B9B9B
+            text-align: center
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Roboto-Regular
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 18px
+        .accent_btn
+            margin-top: 85px
+            background-color: $accent
+            width: 200px
+            height: 50px
+            flex-shrink: 0
+            border: none
+            border-radius: 3px
+            font-size: 18px
+            font-weight: 400
+            font-family: Roboto-Regular
+            color: $bg-color
+
+@media (min-width: 768px)
+    .team
+        .container
+            display: flex
+            gap: 34px
+            .team_img
+                .team_photo
+                   /*  width: 240px
+                    height: 227px */
+                    
+            .team_text
+                .team_descr
+                    width: 400px
+                    font-size: 18px
+                    line-height: 18px
+                    
+                    text-align: left
+                .accent_btn
+                    margin-top: 25px
