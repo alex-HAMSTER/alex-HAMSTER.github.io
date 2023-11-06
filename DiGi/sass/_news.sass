@@ -1,0 +1,23 @@
+.news
+    padding: 40px 0
+    background-color: #F9F6E5
+    &_title
+        color: #4A4A4A
+        text-align: center
+        font-feature-settings: 'clig' off, 'liga' off
+        font-family: RobotoCondensed-Regular
+        font-size: 24px
+        font-weight: 400
+        line-height: 38px
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            width: 50px
+            height: 8px
+            background-color: $accent
+            left: 50%
+            transform: translate3d(-50%, 60px, 0)
+    &_content
+        &_block
+            
