@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random name</title>
+</head>
+<body>
+    <h1>Случайное имя</h1>
+    <ul>
+        <li>
+            <input type="checkbox" id="name1" value="Хуяцик - чудовище">
+            <label for="name1">Хуяцик - чудовище"</label>
+        </li>
+        <li>
+            <input type="checkbox" id="name2" value="ЛАВРУШААА">
+            <label for="name2">ЛАВРУШААА</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name3" value="Елисей">
+            <label for="name2">Елисей</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name4" value="Сяяяявиики">
+            <label for="name2">Сяяяявиики</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name5" value="Сеньйор без опыта">
+            <label for="name2">Сеньйор без опыта</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name6" value="Лера">
+            <label for="name2">Лера</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name7" value="Вика">
+            <label for="name2">Вика</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name7" value="Инна">
+            <label for="name2">Инна</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name7" value="Player_1">
+            <label for="name2">Player_1</label>
+        </li>
+	<li>
+            <input type="checkbox" id="name7" value="Player_2">
+            <label for="name2">Player_2</label>
+        </li>
+        <!-- Добавьте остальные имена с галочками -->
+    </ul>
+    <button onclick="getRandomName()">Получить случайное имя</button>
+    <p id="randomName"></p>
+
+    <script>
+        const names = ["Хуяцик - чудовище", "Елисей", "Сяяяявиики", "Сеньйор без опыта", "ЛАВРУШААА", "Лера", "Вика", "Инна", "Player_1", "Player_2"];
+
+        function getRandomName() {
+            const selectedNames = [];
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                selectedNames.push(checkbox.value);
+            });
+
+            if (selectedNames.length > 0) {
+                const randomIndex = Math.floor(Math.random() * selectedNames.length);
+                const randomName = selectedNames[randomIndex];
+                const randomColor = getRandomColor();
+                const coloredName = `<span style="color: ${randomColor};">${randomName}</span>`;
+                document.getElementById('randomName').innerHTML = `Случайное имя: ${coloredName}`;
+            } else {
+                document.getElementById('randomName').textContent = 'Выберите хотя бы одно имя.';
+            }
+        }
+
+        function getRandomColor() {
+            const colors = ["red", "orange", "green", "blue"];
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+    </script>
+</body>
+</html>
+
