@@ -1,0 +1,33 @@
+.up {
+  position: fixed;
+  font-size: 14px;
+  line-height: 100%;
+  color: $white;
+  right: 36px;
+  bottom: 200px;
+  text-transform: uppercase;
+  padding-top: 25px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity .25s ease;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 17px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: url("../images/header/arrow.svg");
+  }
+  &.show {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .up {
+    bottom: 100px;
+  }
+}
+

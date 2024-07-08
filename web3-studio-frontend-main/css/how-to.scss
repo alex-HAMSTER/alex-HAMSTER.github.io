@@ -1,0 +1,252 @@
+@import "style/_basics";
+@import "style/_map";
+
+.where-i-am {
+  margin-top: 130px;
+  .where-i-am__container {
+    @include big-width;
+    ul {
+      display: flex;
+      li {
+        a {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          color: $boobsGrey;
+        }
+        position: relative;
+        padding-right: 20px;
+        margin-right: 20px;
+        &:after{
+          content: "/";
+          position: absolute;
+          color: $boobsGrey;
+          right: 0;
+          top: 2px;
+        }
+        &:last-child {
+          a {
+            color: $blue;
+          }
+          padding: 0;
+          margin: 0;
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.create {
+  padding-top: 90px;
+  .create__content {
+    @include big-width;
+    .create__text {
+      display: flex;
+      justify-content: space-between;
+      .create__left-text {
+        @include text-stipe-left;
+        max-width: 400px;
+      }
+      .create__right-text {
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: $heroGrey;
+          max-width: 532px;
+          &:last-child {
+            padding-top: 16px;
+          }
+        }
+      }
+    }
+    .create__img {
+      width: 84%;
+      height: auto;
+      object-fit: contain;
+      margin: 128px auto 0 auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.tasks {
+  padding-top: 160px;
+  .tasks__content {
+    @include big-width;
+    display: flex;
+    justify-content: space-between;
+    .tasks__left-text {
+      @include text-stipe-left;
+      max-width: 453px;
+      width: 40%;
+    }
+    .tasks__cards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $borderBlack;
+      width: 55%;
+      .tasks__card {
+        width: 40%;
+        padding-bottom: 100px;
+        h4 {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 21px;
+          color: $white;
+          padding-top: 36px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: $heroGrey;
+          padding-top: 31px;
+        }
+      }
+    }
+  }
+}
+
+.stages {
+  padding-top: 130px;
+  .stages__content {
+    @include big-width;
+    display: flex;
+    justify-content: space-between;
+    .stages__left-text {
+      @include text-stipe-left;
+      max-width: 453px;
+      width: 40%;
+    }
+    ul {
+      width: 55%;
+      li {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: $heroGrey;
+        display: block;
+        padding-left: 44px;
+        position: relative;
+        max-width: 570px;
+        padding-bottom: 32px;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 10px;
+          height: 7px;
+          width: 7px;
+          border: 1px solid $blue;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  .tasks {
+    .tasks__content {
+      display: block;
+      .tasks__left-text {
+        width: 100%;
+      }
+      .tasks__cards {
+        width: 100%;
+        padding-top: 100px;
+        .tasks__card {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1060px) {
+  .create {
+    .create__content {
+      .create__text {
+        display: block;
+        justify-content: space-between;
+        .create__right-text {
+          padding-top: 45px;
+          p {
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+
+  .stages {
+    padding-top: 130px;
+    .stages__content {
+      display: block;
+      .stages__left-text {
+        width: 100%;
+      }
+      ul {
+        width: 100%;
+        padding-top: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .tasks {
+    padding-top: 80px;
+    .tasks__content {
+      .tasks__cards {
+        padding-top: 60px;
+        display: block;
+        .tasks__card {
+          width: 100%;
+          padding-bottom: 60px;
+          p {
+            max-width: 500px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .create {
+    padding-top: 55px;
+    .create__content {
+      .create__img {
+        width: 100%;
+        background: $photoReplace;
+        margin: 40px auto 0 auto;
+      }
+    }
+  }
+
+  .stages {
+    padding-top: 60px;
+    .stages__content {
+      .stages__left-text {
+        max-width: 245px;
+      }
+      ul {
+        padding-top: 50px;
+        li {
+          font-size: 16px;
+          line-height: 140%;
+          padding-left: 35px;
+        }
+      }
+    }
+  }
+}

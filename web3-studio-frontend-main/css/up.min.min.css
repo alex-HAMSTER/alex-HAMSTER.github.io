@@ -1,0 +1,1 @@
+.up{position:fixed;font-size:14px;line-height:100%;color:#fff;right:36px;bottom:200px;text-transform:uppercase;padding-top:25px;z-index:100}.up:before{content:"";position:absolute;width:11px;height:17px;top:0;left:50%;-webkit-transform:translate(-50%,0);transform:translate(-50%,0);background:url(../../images/header/arrow.svg)}

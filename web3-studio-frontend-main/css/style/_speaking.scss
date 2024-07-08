@@ -1,0 +1,119 @@
+.speaking {
+  padding-top: 180px;
+  .speaking__content {
+    @include small-width;
+    padding-bottom: 134px;
+    border-bottom: 1px solid $borderBlack;
+    h2 {
+      @include default-h;
+    }
+    .speaking__secondary-text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: $boobsGrey;
+      padding-top: 24px;
+      text-align: center;
+    }
+    .speaking__circle {
+      padding-top: 130px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 50;
+      .speaking__img {
+        width: 160px;
+        text-align: center;
+        transition: all .25s ease;
+        cursor: pointer;
+        position: relative;
+        img {
+          display: inline-block;
+          text-align: center;
+          transition: all .25s ease;
+        }
+        &:first-child {
+          top: 220px;
+        }
+        &:last-child {
+          top: 220px;
+        }
+        &:nth-child(even) {
+          top: 60px;
+        }
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            transform: scale(1.2);
+            img {
+              transform: translate(0 , -20px);
+            }
+          }
+        }
+      }
+    }
+    .speaking__circle-image {
+      text-align: center;
+      overflow: hidden;
+      height: 355px;
+      position: relative;
+      padding-top: 50px;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 125px;
+        background: $shadow;
+      }
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  .speaking {
+    .speaking__content {
+      padding-bottom: 0;
+      border-bottom: none;
+      .speaking__circle {
+        padding-top: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: unset;
+        flex-wrap: wrap;
+        .speaking__img {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 90px;
+          position: static;
+          img {
+            width: 50%;
+          }
+        }
+      }
+      .speaking__circle-image {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .speaking {
+    padding-top: 100px;
+    .speaking__content {
+      width: 91%;
+      .speaking__circle {
+        padding-top: 75px;
+        .speaking__img {
+          img {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}

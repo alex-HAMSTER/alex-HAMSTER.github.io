@@ -1,0 +1,117 @@
+@mixin big-width {
+  max-width: 1316px;
+  width: 91%;
+  margin: 0 auto;
+}
+
+
+@mixin small-width {
+  max-width: 1100px;
+  width: 76%;
+  margin: 0 auto;
+}
+
+@import "_btns";
+@import "_reset";
+@import "_colors";
+@import "_layouts";
+@import "_header";
+@import "_footer";
+@import "_fonts";
+@import "_up";
+@import "_scrollbar";
+@import "_form";
+@import "_download";
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+#transition_disabled {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+body {
+  font-family: 'gilroy', serif;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: $black;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.particles-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 8;
+
+  canvas {
+    display: block;
+  }
+
+  &.half {
+    width: 42%;
+  }
+
+  &.inactive {
+    z-index: -1;
+  }
+}
+
+.where-i-am {
+  margin-top: 130px;
+
+  .where-i-am__container {
+    @include big-width;
+
+    ul {
+      display: flex;
+
+      li {
+        a {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          color: $boobsGrey;
+        }
+
+        position: relative;
+        padding-right: 20px;
+        margin-right: 20px;
+
+        &:after {
+          content: "/";
+          position: absolute;
+          color: $boobsGrey;
+          right: 0;
+          top: 2px;
+        }
+
+        &:last-child {
+          a {
+            color: $blue;
+          }
+
+          padding: 0;
+          margin: 0;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

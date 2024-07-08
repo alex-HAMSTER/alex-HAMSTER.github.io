@@ -1,0 +1,117 @@
+.our-services {
+  padding-top: 180px;
+  .our-services__content {
+    position: relative;
+    @include big-width;
+    .our-services__first-block {
+      display: flex;
+      justify-content: space-between;
+      .our-services__first-left {
+        @include text-stipe-left;
+        max-width: 371px;
+      }
+      .our-services__first-right {
+        width: 50%;
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: $heroGrey;
+          padding-bottom: 16px;
+          max-width: 532px;
+        }
+      }
+    }
+    .our-services__second-block {
+      padding-top: 200px;
+      display: flex;
+      justify-content: space-between;
+      .our-services__second-left {
+        @include text-stipe-left;
+        max-width: 522px;
+      }
+      .our-services__second-right {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        .our-services__from-zero {
+          h3 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            padding-bottom: 30px;
+          }
+          ul {
+            li {
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 150%;
+              color: $heroGrey;
+              padding-bottom: 20px;
+            }
+          }
+        }
+        .our-services__support {
+          h3 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            padding-bottom: 30px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: $heroGrey;
+            max-width: 308px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .our-services {
+    padding-top: 100px;
+    .our-services__content {
+      .our-services__first-block {
+        display: block;
+        .our-services__first-right {
+          width: auto;
+          padding-top: 50px;
+          p {
+            max-width: none;
+          }
+        }
+      }
+      .our-services__second-block {
+        padding-top: 100px;
+        display: block;
+        .our-services__second-right {
+          width: auto;
+          padding-top: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .our-services {
+    .our-services__content {
+      .our-services__second-block {
+        .our-services__second-right {
+          display: block;
+          .our-services__support {
+            padding-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

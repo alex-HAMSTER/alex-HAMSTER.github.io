@@ -1,0 +1,48 @@
+@mixin btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  padding: 17px 36px;
+  cursor: pointer;
+  border: 1px solid $blue;
+  transition: all .25s ease;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $opacityBlue;
+      border-radius: 0;
+    }
+  }
+  &:active {
+    background: $blue;
+  }
+}
+
+@mixin empty-btn {
+  color: $white;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 11px 29px;
+  border: 1px solid $blue;
+  transition: all .25s ease;
+  border-radius: 0;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $opacityBlue;
+      border-radius: 0;
+    }
+  }
+  &:active {
+    background: $blue;
+    border-radius: 0;
+  }
+}
+
+@mixin disabled {
+  background-color: $disabled;
+  user-select: none;
+  pointer-events: none;
+  border: 1px solid transparent;
+  color: $white;
+}
