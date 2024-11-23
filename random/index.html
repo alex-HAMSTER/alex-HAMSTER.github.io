@@ -82,7 +82,7 @@
             <label for="name2">ЛАВРУШААА</label>
         </li>
         <li>
-            <input type="checkbox" id="name3" value="Елисей" photo_User="img/xy34.jpg">
+            <input type="checkbox" id="name3" value="Елисей" photo_User="img/xy34.jpg, img/banka_blya.jpg">
             <label for="name3">Елисей</label>
         </li>
         <li>
@@ -115,15 +115,21 @@
 
             // Получаем имя и фото пользователя
             const userName = randomCheckbox.value;
-            const userPhoto = randomCheckbox.getAttribute("photo_User");
+            const photoUser = randomCheckbox.getAttribute("photo_User");
+
+            // Разделяем список фотографий
+            const photos = photoUser ? photoUser.split(",").map(photo => photo.trim()) : [];
+
+            // Выбираем случайное фото
+            const randomPhoto = photos.length > 0 ? photos[Math.floor(Math.random() * photos.length)] : null;
 
             // Показываем имя с рандомным цветом
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             document.getElementById('randomName').innerHTML = `<span style="color: ${randomColor};">${userName}</span>`;
 
             // Устанавливаем фото на фон
-            if (userPhoto) {
-                document.body.style.backgroundImage = `url(${userPhoto})`;
+            if (randomPhoto) {
+                document.body.style.backgroundImage = `url(${randomPhoto})`;
             } else {
                 document.body.style.backgroundImage = 'none';
             }
@@ -143,6 +149,8 @@
             document.getElementById('randomName').textContent = '';
         }
     </script>
+
+
 </body>
 
 </html>
