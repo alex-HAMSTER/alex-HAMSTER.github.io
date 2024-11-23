@@ -1,134 +1,148 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random name</title>
 </head>
+
 <body>
     <style>
-        input{
+        input {
             width: 25px;
             height: 25px;
         }
-        label{
+
+        label {
             font-size: 25px;
         }
-        button{
+
+        button {
             width: 190px;
             height: 60px;
             background: none;
             border-radius: 10px;
             margin-left: 20px;
             font-size: 20px;
+            color: #d4d4d4;
         }
-        li{
+
+        li {
             margin: 10px;
         }
-        p{
+
+        p {
             font-size: 30px;
         }
-    	html{
-		background-image: url(img/xy34.jpg);
-   		background-repeat: no-repeat;
-    		background-size: cover;
-		
-    
-    }
-	    ul{
-	list-style:none;
-	background:none;
-	    }
-	    li{
-	list-style:none;
-	background:none;
-	    }    
 
-p{
-color:#ffffff;
-}	
-	    label{
-color:#ffffff;
-}
-	    li *{
-color:#ffffff;
-}
-	    
-	    
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul {
+            list-style: none;
+            background: none;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            background: none;
+        }
+
+        p {
+            color: #d4d4d4;
+        }
+
+        label {
+            color: #d4d4d4;
+            font-size: 2em;
+        }
+
+        li * {
+            color: #d4d4d4;
+        }
+
+        h1 {
+            color: #d4d4d4;
+            font-weight: 800;
+            font-size: 3em;
+        }
     </style>
+
     <h1>Случайное имя</h1>
-    <ul>
+    <ul id="nameList">
         <li>
-            <input type="checkbox" id="name1" value="Хуяцик - чудовище">
-            <label for="name1">Хуяцик - чудовище"</label>
+            <input type="checkbox" id="name1" value="Хуяцик - чудовище" photo_User="">
+            <label for="name1">Хуяцик - чудовище</label>
         </li>
         <li>
-            <input type="checkbox" id="name2" value="ЛАВРУШААА">
+            <input type="checkbox" id="name2" value="ЛАВРУШААА" photo_User="">
             <label for="name2">ЛАВРУШААА</label>
         </li>
-	<li>
-            <input type="checkbox" id="name3" value="Елисей">
-            <label for="name2">Елисей</label>
+        <li>
+            <input type="checkbox" id="name3" value="Елисей" photo_User="img/xy34.jpg">
+            <label for="name3">Елисей</label>
         </li>
-	<li>
-            <input type="checkbox" id="name4" value="Сяяяявиики">
-            <label for="name2">Сяяяявиики</label>
+        <li>
+            <input type="checkbox" id="name4" value="Сяяяявиики" photo_User="">
+            <label for="name4">Сяяяявиики</label>
         </li>
-	<li>
-            <input type="checkbox" id="name5" value="Сеньйор без опыта">
-            <label for="name2">Сеньйор без опыта</label>
+        <li>
+            <input type="checkbox" id="name5" value="Сеньйор без опыта" photo_User="">
+            <label for="name5">Сеньйор без опыта</label>
         </li>
-	<li>
-            <input type="checkbox" id="name6" value="Лера">
-            <label for="name2">Лера</label>
-        </li>
-	<li>
-            <input type="checkbox" id="name7" value="Вика">
-            <label for="name2">Вика</label>
-        </li>
-	<li>
-            <input type="checkbox" id="name7" value="алИННА(наебал)">
-            <label for="name2">алИННА(наебал)</label>
-        </li>
-	<li>
-            <input type="checkbox" id="name7" value="Player_1">
-            <label for="name2">Player_1</label>
-        </li>
-	<li>
-            <input type="checkbox" id="name7" value="Player_2">
-            <label for="name2">Player_2</label>
-        </li>
-        <!-- Добавьте остальные имена с галочками -->
     </ul>
-    <button onclick="getRandomName()">Получить случайное имя</button>
+    <button id="randomNameButton" onclick="getRandomName()">Получить случайное имя</button>
+    <button id="resetButton" style="display: none;" onclick="resetList()">Следующее имя</button>
     <p id="randomName"></p>
 
     <script>
-        const names = ["Хуяцик - чудовище", "Елисей", "Сяяяявиики", "Сеньйор без опыта", "ЛАВРУШААА", "Лера", "Вика", "Инна", "Player_1", "Player_2"];
+        const colors = ["red", "orange", "green", "blue"];
 
         function getRandomName() {
-            const selectedNames = [];
             const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-            checkboxes.forEach(checkbox => {
-                selectedNames.push(checkbox.value);
-            });
 
-            if (selectedNames.length > 0) {
-                const randomIndex = Math.floor(Math.random() * selectedNames.length);
-                const randomName = selectedNames[randomIndex];
-                const randomColor = getRandomColor();
-                const coloredName = `<span style="color: ${randomColor};">${randomName}</span>`;
-                document.getElementById('randomName').innerHTML = `Случайное имя: ${coloredName}`;
-            } else {
+            if (checkboxes.length === 0) {
                 document.getElementById('randomName').textContent = 'Выберите хотя бы одно имя.';
+                return;
             }
+
+            // Получаем случайный выбранный элемент
+            const randomIndex = Math.floor(Math.random() * checkboxes.length);
+            const randomCheckbox = checkboxes[randomIndex];
+
+            // Получаем имя и фото пользователя
+            const userName = randomCheckbox.value;
+            const userPhoto = randomCheckbox.getAttribute("photo_User");
+
+            // Показываем имя с рандомным цветом
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById('randomName').innerHTML = `<span style="color: ${randomColor};">${userName}</span>`;
+
+            // Устанавливаем фото на фон
+            if (userPhoto) {
+                document.body.style.backgroundImage = `url(${userPhoto})`;
+            } else {
+                document.body.style.backgroundImage = 'none';
+            }
+
+            // Скрываем список и показываем кнопку сброса
+            document.getElementById('nameList').style.display = 'none';
+            document.getElementById('randomNameButton').style.display = 'none';
+            document.getElementById('resetButton').style.display = 'block';
         }
 
-        function getRandomColor() {
-            const colors = ["red", "orange", "green", "blue"];
-            const randomIndex = Math.floor(Math.random() * colors.length);
-            return colors[randomIndex];
+        function resetList() {
+            // Возвращаем начальное состояние
+            document.body.style.backgroundImage = 'none';
+            document.getElementById('nameList').style.display = 'block';
+            document.getElementById('randomNameButton').style.display = 'block';
+            document.getElementById('resetButton').style.display = 'none';
+            document.getElementById('randomName').textContent = '';
         }
     </script>
 </body>
-</html>
 
+</html>
