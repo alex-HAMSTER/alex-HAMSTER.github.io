@@ -18,13 +18,13 @@
         }
 
         button {
-            width: 190px;
+            width: 80%;
             height: 60px;
             background: none;
             border-radius: 10px;
             margin-left: 20px;
-            font-size: 20px;
-            color: #d4d4d4;
+            font-size: 1.5em;
+            color: #ffffff;
         }
 
         li {
@@ -38,7 +38,12 @@
         body {
             background-repeat: no-repeat;
             background-size: cover;
+            background: url('img/gay.gif') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px 0px;
         }
+
+
 
         ul {
             list-style: none;
@@ -52,46 +57,62 @@
         }
 
         p {
-            color: #d4d4d4;
+            color: #ffffff;
+            font-weight: 500;
         }
 
         label {
-            color: #d4d4d4;
-            font-size: 2em;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 2.1em;
         }
 
         li * {
-            color: #d4d4d4;
+            color: #ffffff;
+            font-weight: 500;
         }
 
         h1 {
-            color: #d4d4d4;
+            color: #ffffff;
             font-weight: 800;
             font-size: 3em;
+            margin: 0;
         }
     </style>
 
-    <h1>Случайное имя</h1>
+    <h1 id="resetAllInput">Случайное имя</h1>
     <ul id="nameList">
         <li>
-            <input type="checkbox" id="name1" value="Хуяцик - чудовище" photo_User="">
+            <input type="checkbox" id="name1" value="Хуяцик - чудовище" photo_User="img/vlad_1.jpg">
             <label for="name1">Хуяцик - чудовище</label>
         </li>
         <li>
-            <input type="checkbox" id="name2" value="ЛАВРУШААА" photo_User="">
+            <input type="checkbox" id="name2" value="ЛАВРУШААА" photo_User="img/lavruk_1.jpg, img/lavruk_2.jpg, img/lavruk_3.jpg">
             <label for="name2">ЛАВРУШААА</label>
         </li>
         <li>
-            <input type="checkbox" id="name3" value="Елисей" photo_User="img/xy34.jpg, img/banka_blya.jpg">
+            <input type="checkbox" id="name3" value="Елисей" photo_User="img/leha_0.jpg, img/leha_1.jpg">
             <label for="name3">Елисей</label>
         </li>
         <li>
-            <input type="checkbox" id="name4" value="Сяяяявиики" photo_User="">
+            <input type="checkbox" id="name4" value="Сяяяявиики" photo_User="img/slava_1.jpg">
             <label for="name4">Сяяяявиики</label>
         </li>
         <li>
-            <input type="checkbox" id="name5" value="Сеньйор без опыта" photo_User="">
-            <label for="name5">Сеньйор без опыта</label>
+            <input type="checkbox" id="name5" value="удачный Крпитоинвестор" photo_User="img/crypto_1.jpg, img/crypto_2.jpg, img/crypto_3.jpg, img/crypto_0.jpg, img/crypto_00.jpg">
+            <label for="name5">удачный Крпитоинвестор</label>
+        </li>
+        <li>
+            <input type="checkbox" id="name6" value="Алина (две полоски)" photo_User="img/alina_1.jpg">
+            <label for="name6">Алина = | |  (две полоски)</label>
+        </li>
+        <li>
+            <input type="checkbox" id="name7" value="Вика" photo_User="">
+            <label for="name7">Вика пока Вика</label>
+        </li>
+        <li>
+            <input type="checkbox" id="name8" value="Лера Кулиш" photo_User="img/lera_1.jpg">
+            <label for="name8">Лера Кулиш</label>
         </li>
     </ul>
     <button id="randomNameButton" onclick="getRandomName()">Получить случайное имя</button>
@@ -125,14 +146,15 @@
 
             // Показываем имя с рандомным цветом
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.getElementById('randomName').innerHTML = `<span style="color: ${randomColor};">${userName}</span>`;
+            document.getElementById('randomName').innerHTML = `<span style="color: ${randomColor}; font-size: 2em">${userName}</span>`;
 
             // Устанавливаем фото на фон
             if (randomPhoto) {
                 document.body.style.backgroundImage = `url(${randomPhoto})`;
-            } else {
-                document.body.style.backgroundImage = 'none';
-            }
+            } 
+            // else {
+            //     document.body.style.backgroundImage = 'none';
+            // }
 
             // Скрываем список и показываем кнопку сброса
             document.getElementById('nameList').style.display = 'none';
@@ -142,12 +164,26 @@
 
         function resetList() {
             // Возвращаем начальное состояние
-            document.body.style.backgroundImage = 'none';
+            document.body.style.background = "url('img/gay.gif') no-repeat center center fixed";
+            document.body.style.backgroundSize = "cover";
             document.getElementById('nameList').style.display = 'block';
             document.getElementById('randomNameButton').style.display = 'block';
             document.getElementById('resetButton').style.display = 'none';
             document.getElementById('randomName').textContent = '';
         }
+
+        const resetAllInput = document.getElementById('resetAllInput');
+        const ulElement = document.querySelector('ul');
+        const randomNameButton = document.getElementById('randomNameButton');
+
+        // Переключение видимости
+        resetAllInput.addEventListener('click', function () {
+            const isHidden = ulElement.style.display === 'none';
+            
+            ulElement.style.display = isHidden ? 'block' : 'none';
+            randomNameButton.style.display = isHidden ? 'block' : 'none';
+        });
+
     </script>
 
 
