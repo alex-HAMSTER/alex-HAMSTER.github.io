@@ -13,9 +13,6 @@
             height: 25px;
         }
 
-        label {
-            font-size: 25px;
-        }
 
         button {
             width: 80%;
@@ -25,6 +22,8 @@
             margin-left: 20px;
             font-size: 1.5em;
             color: #ffffff;
+            font-weight: 600;
+            margin-top: 15px;
         }
 
         li {
@@ -43,8 +42,6 @@
             padding: 20px 0px;
         }
 
-
-
         ul {
             list-style: none;
             background: none;
@@ -58,13 +55,15 @@
 
         p {
             color: #ffffff;
-            font-weight: 500;
+            font-weight: 800;
+            margin: 0;
+            font-size: 40px;
         }
 
         label {
             color: #ffffff;
             font-weight: 500;
-            font-size: 2em;
+            font-size: 1.75em;
         }
 
         li * {
@@ -100,9 +99,9 @@
             <label for="name4">Сяяяявиики</label>
         </li>
         <li>
-            <input type="checkbox" id="name5" value="удачный Крпитоинвестор"
+            <input type="checkbox" id="name5" value="удачный Криптоинвестор"
                 photo_User="img/crypto_1.jpg, img/crypto_2.jpg, img/crypto_3.jpg, img/crypto_0.jpg, img/crypto_00.jpg">
-            <label for="name5">удачный Крпитоинвестор</label>
+            <label for="name5">удачный Криптоинвестор</label>
         </li>
         <li>
             <input type="checkbox" id="name6" value="Алина (две полоски)" photo_User="img/alina_1.jpg">
@@ -119,7 +118,8 @@
     </ul>
     <button id="randomNameButton" onclick="getRandomName()">Получить случайное имя</button>
     <button id="resetButton" style="display: none;" onclick="resetList()">Следующее имя</button>
-    <p id="randomName"></p>
+    <p id="randomName" style="    display: flex;
+    justify-content: center;"></p>
 
     <script>
         const colors = ["red", "orange", "green", "blue"];
@@ -148,7 +148,7 @@
 
             // Показываем имя с рандомным цветом
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.getElementById('randomName').innerHTML = `<span style="color: ${randomColor}; font-size: 2em">${userName}</span>`;
+            document.getElementById('randomName').innerHTML = `<span style="color: ${randomColor}; font-size: 1.4em; margin: 10px auto">${userName}</span>`;
 
             // Устанавливаем фото на фон
             if (randomPhoto) {
